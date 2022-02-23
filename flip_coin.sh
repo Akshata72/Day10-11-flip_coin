@@ -10,10 +10,21 @@ result=$((RANDOM%2))
 if (($result==1))
 then
      ((head_count++))
+elif ((head_count==tail_count))
+
+then
+
+echo "game is continues " $head_count=$tail_count
+
 else
      ((tail_count++))
+
+
 fi
+
 done
+
+
 if (($head_count==21))
 then
 echo "No.of times head won" $head_count "by" $tail_count
