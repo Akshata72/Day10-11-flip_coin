@@ -3,7 +3,7 @@ head=1
 tail=0
 head_count=0
 tail_count=0
-for((i=1; i<=100; i++))
+while((head_count!=21  && tail_count!=21))
 do
 result=$((RANDOM%2))
 
@@ -14,8 +14,10 @@ else
      ((tail_count++))
 fi
 done
+if (($head_count==21))
+then
+echo "No.of times head won" $head_count "by" $tail_count
 
-echo "winner"=$head
-echo "losser"=$tail
-echo "No.of times head won"=$head_count
-echo "No. of time tail won"=$tail_count
+else 
+echo "No.of times tail won" $tail_count "by" $head_count
+fi
